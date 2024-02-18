@@ -8,6 +8,9 @@ function clock() {
   const end = new Date(endDate);
   const now = new Date();
   const Diff = (end - now) / 1000;
+
+  if (Diff < 0) return;
+
   console.log(Diff);
   // Converted into days
   inputs[0].value = Math.floor(Diff / 3600 / 24);
